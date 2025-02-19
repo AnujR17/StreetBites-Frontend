@@ -1,0 +1,176 @@
+.profile-header {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.profile-banner {
+    position: relative;
+    height: 200px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Update existing profile-info styles */
+.profile-info {
+    position: relative;
+    text-align: center;
+    margin-top: -75px;
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: var(--border-radius-md);
+    color: var(--text-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.back-btn:hover {
+    background: white;
+    transform: translateX(-2px);
+}
+
+.back-btn svg {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--background-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h1 {
+    margin: var(--spacing-md) 0;
+    color: var(--text-dark);
+}
+
+.btn-logout:hover {
+    background: #ff3333;
+    transform: translateY(-2px);
+}
+
+.btn-logout svg {
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Add recipe button */
+.fab-add-recipe {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all var(--transition-base);
+}
+
+.fab-add-recipe:hover {
+    transform: scale(1.1) rotate(90deg);
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    max-width: 400px;
+    width: 90%;
+    animation: slideUp 0.3s ease;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+/* Toast messages */
+.toast {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease;
+}
+
+.toast-success {
+    background: var(--success-color);
+}
+
+.toast-error {
+    background: var(--error-color);
+}
+
+.user-recipes {
+    padding: var(--spacing-xl) 0;
+}
+
+.user-recipes .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .recipes-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

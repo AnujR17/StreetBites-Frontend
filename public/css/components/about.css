@@ -1,0 +1,41 @@
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://ylejllriwgtrpuzkcpek.supabase.co/storage/v1/object/public/recipe-images/recipes/brooke-lark-08bOYnH_r_E-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: calc(var(--spacing-xl) * 2) 0;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-hero .lead {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content {
+    padding: var(--spacing-xl) 0;
+}
+
+.about-story, .about-mission {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.about-story h2, .about-mission h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-story p, .about-mission p {
+    line-height: 1.8;
+    color: var(--text-dark);
+}
