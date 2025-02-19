@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Bites - Delicious Indian Street Food Recipes</title>
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/components/navbar.css">
+    <link rel="stylesheet" href="public/css/components/hero.css">
+    <link rel="stylesheet" href="public/css/components/recipe-card.css">
+    <link rel="stylesheet" href="public/css/components/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <h1>Street Bites</h1>
+                </a>
+            </div>
+            
+            <nav class="navbar-menu">
+                <ul id="main-nav">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-auth">
+                        <!-- Auth content -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Discover Delicious Indian Street Food Recipes</h2>
+                <p class="hero-subtitle">Explore authentic recipes shared by food lovers</p>
+                <form class="search-form" id="search-form">
+                    <div class="search-input-wrapper">
+                        <input 
+                            type="search" 
+                            id="search-input" 
+                            placeholder="Search recipes..." 
+                            aria-label="Search recipes">
+                        <button type="submit" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <section class="todays-special">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Today's Special</h3>
+                    <p class="section-desc">Our hand-picked recipe of the day</p>
+                </div>
+                <div class="special-recipe-card">
+                    <!-- Recippes content -->
+                </div>
+            </div>
+        </section>
+
+        <section class="new-recipes">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Newly Added</h3>
+                    <a href="/recipes.html" class="btn btn-text">View All</a>
+                </div>
+                <div class="recipe-grid" id="new-recipes-grid">
+                    <!-- Recipes content -->
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-recipes">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Featured Recipes</h3>
+                    <a href="/recipes.html" class="btn btn-text">View All</a>
+                </div>
+                <div class="recipe-grid" id="featured-recipes-grid">
+                    <!-- Features likes more that 4 here ;p -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Street Bites</h2>
+                    <p>Discover authentic Indian street food recipes</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="recipes.html">All Recipes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Street Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="public/js/auth/auth.js"></script>
+    <script src="public/js/components/navbar.js"></script>
+    <script src="public/js/components/recipes.js"></script>
+</body>
+</html>
