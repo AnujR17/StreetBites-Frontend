@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes - Street Bites</title>
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/components/navbar.css">
+    <link rel="stylesheet" href="public/css/components/recipes-list.css">
+    <link rel="stylesheet" href="public/css/components/recipe-card.css">
+    <link rel="stylesheet" href="public/css/components/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <h1>Street Bites</h1>
+                </a>
+            </div>
+            
+            <nav class="navbar-menu">
+                <ul id="main-nav">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-auth">
+                        <!-- Auth content -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="all-recipes">
+            <div class="container">
+                <div class="section-header">
+                    <h1>All Recipes</h1>
+                </div>
+                <div class="recipes-grid" id="all-recipes-grid">
+                    <!-- Recipe cards will be loaded -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Street Bites</h2>
+                    <p>Discover authentic Indian street food recipes</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="recipes.html">All Recipes</a></li>
+                    </ul>
+                </div>      
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Street Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/auth/auth.js"></script>
+    <script src="public/js/components/navbar.js"></script>
+    <script src="public/js/components/recipes-list.js"></script>
+</body>
+</html>

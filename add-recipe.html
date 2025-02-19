@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Recipe - Street Bites</title>
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/components/recipe-form.css">
+</head>
+<body>
+    <main>
+        <div class="recipe-creation">
+            <div class="creation-header">
+                <button class="btn btn-text" onclick="window.location.href='index.html'">
+                    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Cancel
+                </button>
+                <h1>Share Your Recipe</h1>
+            </div>
+
+            <form id="recipe-form" class="recipe-form">
+                <section class="form-section">
+                    <div class="form-group">
+                        <input type="text" id="recipe-title" placeholder=" " required>
+                        <label for="recipe-title">Recipe Title</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="recipe-description" placeholder=" " required></textarea>
+                        <label for="recipe-description">Description</label>
+                    </div>
+
+                    <div class="form-metrics">
+                        <div class="form-group">
+                            <input type="number" id="prep-time" placeholder=" " required min="1">
+                            <label for="prep-time">Prep Time (mins)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="cook-time" placeholder=" " required min="1">
+                            <label for="cook-time">Cook Time (mins)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="servings" placeholder=" " required min="1">
+                            <label for="servings">Servings</label>
+                        </div>
+                    </div>
+
+                    <div class="difficulty-section">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <div class="difficulty-options">
+                            <label class="difficulty-btn">
+                                <input type="radio" name="difficulty" value="Easy" required>
+                                <span>Easy</span>
+                            </label>
+                            <label class="difficulty-btn">
+                                <input type="radio" name="difficulty" value="Medium">
+                                <span>Medium</span>
+                            </label>
+                            <label class="difficulty-btn">
+                                <input type="radio" name="difficulty" value="Hard">
+                                <span>Hard</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3 class="section-title">Ingredients</h3>
+                    <div id="ingredients-list" class="ingredients-list">
+                        <!-- User input for ingredients handled by recipe-form.js -->
+                    </div>
+                    <button type="button" class="btn btn-add" id="add-ingredient">
+                        Add Ingredient
+                    </button>
+                </section>
+
+                <section class="form-section">
+                    <h3 class="section-title">Instructions</h3>
+                    <div id="instructions-list" class="instructions-list">
+                        <!-- User inputs for the instructions -->
+                    </div>
+                    <button type="button" class="btn btn-add" id="add-instruction">
+                        Add Step
+                    </button>
+                </section>
+
+                <section class="form-section" id="image-section">
+                    <div class="image-input-container">
+                        <div class="image-input-tabs">
+                            <button type="button" class="tab-btn active" data-tab="upload">Upload Image</button>
+                            <button type="button" class="tab-btn" data-tab="url">Image URL</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="upload-tab">
+                            <div class="image-upload-area" id="image-upload-area">
+                                <input type="file" id="recipe-image" accept="image/png,image/jpeg,image/jpg" hidden>
+                                <div class="upload-placeholder">
+                                    <svg viewBox="0 0 24 24" width="32" height="32">
+                                        <path d="M4 16l4-4 4 4M14 12l1-1 5 5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <circle cx="9" cy="8" r="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                    <p>Drop your image here or <span class="upload-btn">browse</span></p>
+                                    <span class="upload-hint">Supports: JPG, JPEG, PNG</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="url-tab">
+                            <div class="form-group">
+                                <input type="url" id="image-url" placeholder="">
+                                <label for="image-url">Image URL</label>
+                            </div>
+                        </div>
+                
+                        <div id="image-preview" class="image-preview"></div>
+                    </div>
+                </section>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">Share Recipe</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="public/js/components/recipe-form.js"></script>
+</body>
+</html>
