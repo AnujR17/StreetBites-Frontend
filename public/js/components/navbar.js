@@ -2,11 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
     const navAuth = document.querySelector('.nav-auth');
+    const navbar = document.querySelector('.navbar');
 
     // Handlin gthe mobile menu toggle
     if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
             mainNav?.classList.toggle('active');
+            navbar?.classList.toggle('menu-open');
+            document.body.style.overflow = mainNav?.classList.contains('active') ? 'hidden' : '';
         });
     }
 
@@ -68,7 +73,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mainNav?.classList.contains('active') && 
             !mainNav.contains(e.target) && 
             !menuToggle?.contains(e.target)) {
+            menuToggle?.classList.remove('active');
             mainNav.classList.remove('active');
+            navbar?.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close menu when pressing escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mainNav?.classList.contains('active')) {
+            menuToggle?.classList.remove('active');
+            mainNav.classList.remove('active');
+            navbar?.classList.remove('menu-open');
+            document.body.style.overflow = '';
         }
     });
 
